@@ -40,7 +40,6 @@ a{
 .navbar{
   background-color: var(--orange);
   padding: 1vw; 
-  z-index: -1;
   display: flex;
   justify-content: center;
   gap: 3vw;
@@ -60,4 +59,9 @@ a{
 
 .slider-image{
   width: 80%; 
+}
+
+.home-content{
+  padding: 1vw 2vw;
+  text-align: justify;
 }
