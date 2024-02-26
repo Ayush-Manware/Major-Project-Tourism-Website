@@ -50,12 +50,12 @@ const IndianTourism = () => {
         {data.map((item,index)=>{
           return(
             <div className="indian-tourism-card" key={index}>
-              <img src={item.stateImage} alt="State-Image" className="state-image" />
+              <img src={item.stateImage} alt="State" className="state-image" />
               <h1>{item.state}</h1>
                 {item.cities.map((city, cityindex)=>{
                   return(
                     <div className="indian-tourism-cities" key={cityindex}>
-                      <img src={city.image} alt="city-image" className="cities-image" />
+                      <img src={city.image} alt="city" className="cities-image" />
                       <h1>{city.name}</h1>
                     </div>
                   )

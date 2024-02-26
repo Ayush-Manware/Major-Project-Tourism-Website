@@ -6,7 +6,6 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Dynamic = () => {
   const id = Number(useParams().id);
-  const navi = useNavigate()
 
   const [dynamicData, setDynamicData] = useState([]);
 
@@ -35,7 +34,7 @@ const Dynamic = () => {
           <div className="dynamic-div" key={index}>
             <img
               src={item.stateImage}
-              alt="State-Image"
+              alt="State"
               className="state-image-dynamic"
             />
             <h1 className="state-name-dynamic">{item.state}</h1>
@@ -43,7 +42,7 @@ const Dynamic = () => {
               {item.cities.map((city, cityIndex) => (
                 // <Link to={`/city/${city.id}`} key={cityIndex}>
                  <div className="city-card" key={cityIndex}>
-                    <img src={city.image} alt="City Image" className="city-image" />
+                    <img src={city.image} alt="City" className="city-image" />
                     <h1 className="city-name">{city.name}</h1>
                     {city.places.map((places, placesIndex)=>{
                         return(
