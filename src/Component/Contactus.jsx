@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
@@ -20,8 +19,6 @@ const ContactForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      // const response = await axios.post('https://tourism-backend-file.onrender.com/', formData); 
-      // console.log(response.data); 
       navigate("/")
     } catch (error) {
       console.error('Submission Error:', error); 
