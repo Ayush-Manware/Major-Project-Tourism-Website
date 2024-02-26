@@ -9,6 +9,7 @@ import Contactus from "./Component/Contactus";
 import Login from "./Component/Login";
 import Signup from "./Component/Signup";
 import MainFile from "./MainFile";
+import Dynamic from "./Component/Dynamic";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Contact-Us" element={<Contactus />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Sign-up" element={<Signup />} />
+        <Route path={`/Dynamic/:id`} element={<Dynamic/>} />
       </Routes>
     </>
   );

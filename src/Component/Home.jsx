@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Footer from "./Footer";
 import ImageSlider from "./Slider/Slider";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -17,11 +18,10 @@ const Home = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, [data]);
+  }, []);
 
   return (
     <div className="home-container">
-      
       <ImageSlider />
 
       <div className="home-content">
@@ -106,16 +106,26 @@ const Home = () => {
 
       <div className="home-dynamic">
         <h2>Find your Ideal Tour Packages</h2>
+
         <hr />
+
         <p>
           Travel in India like nothing you've ever experienced, from the
           magnificence Taj Mahal to the highlights of Kerala, Goa, and India,
           this is a great trip for first-time visitors as it encompasses all of
           the major tourist destinations.
         </p>
-        {data.map((item, index) => (
-          <h1 key={index}>{item.state}</h1>
-        ))}
+
+        <div className="home-card-container">
+          {data.map((item, index) => (
+            <Link to={`/Dynamic/${item.id}`} key={index}>
+              <div className="state-cards">
+                <img src={item.stateImage} alt="Alt" />
+                <h1>{item.state}</h1>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <Footer />

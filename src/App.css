@@ -65,3 +65,70 @@ a{
   padding: 1vw 2vw;
   text-align: justify;
 }
+
+.home-dynamic{
+  padding: 2vw;
+  text-align: center;
+
+}
+
+.home-card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2vw;
+}
+
+.state-cards{
+  width: 30vw;
+  border: 1px solid red;
+}
+
+.state-cards img{
+  width: 100%;
+}
+
+.dynamic-container{
+  border: 1px solid red;
+}
+
+.dynamic-div{
+
+}
+
+.state-image-dynamic{
+  width: 100%;
+}
+
+.state-name-dynamic{
+  text-align: center;
+}
+
+.dynamic-cities{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid red;  
+}
+
+.city-card{
+  width: 40vw;
+  text-align: center;
+  /* margin: 1vw auto; */
+}
+
+.city-image{
+  width: 100%;
+}
+
+.places{
+  border: 1px solid red;
+  margin: 1vw auto;
+}
+
+.places-image{
+  border: 1px solid red;
+  width: 100%;
+}
