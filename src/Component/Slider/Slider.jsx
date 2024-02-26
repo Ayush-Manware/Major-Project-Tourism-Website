@@ -17,7 +17,7 @@ const images = [
 export default function ImageSlider() {
     return (
         <SimpleImageSlider
-            width={"100%"} height={400} images={images}
+            width={"100%"} height={"80vw"} images={images}
             showBullets={true} showNavs={true}
             slideDuration={0.5} autoPlay />
     )

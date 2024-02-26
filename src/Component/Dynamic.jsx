@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Dynamic = () => {
   const id = Number(useParams().id);
+  const navi = useNavigate()
 
   const [dynamicData, setDynamicData] = useState([]);
 
@@ -26,6 +27,7 @@ const Dynamic = () => {
 
   const filter = dynamicData.filter((f) => f.id === id);
 
+
   return (
     <div className="dynamic-container">
       {filter.map((item, index) => {
@@ -45,7 +47,7 @@ const Dynamic = () => {
                     <h1 className="city-name">{city.name}</h1>
                     {city.places.map((places, placesIndex)=>{
                         return(
-                            <div className="places">
+                            <div className="places" key={placesIndex} >
                                 <img src={places.image} alt="places" className="places-image" />
                                 <h1>{places.name}</h1>
                                 {/* <p>{places.discription}</p> */}
