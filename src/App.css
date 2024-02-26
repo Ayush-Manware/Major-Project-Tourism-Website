@@ -244,3 +244,7 @@ input,textarea{
   color: white;
   background-color: rgba(36, 36, 253, 0.836);
 }
+
+.login-div{
+  width: 40vw;
+}
