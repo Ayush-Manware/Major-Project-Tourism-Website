@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
+
+  const navigate = useNavigate()
 
   const { email, password } = formData;
 
@@ -18,6 +21,7 @@ const Login = () => {
     try {
       const response = await axios.post('https://tourism-backend-file.onrender.com/login', formData);
       console.log(response.data); 
+      navigate("/")
     } catch (error) {
       console.error('Login Error:', error); 
     }

@@ -8,6 +8,8 @@ const ContactForm = () => {
     message: ''
   });
 
+
+
   const navigate = useNavigate()
 
   const { name, email, message } = formData;
@@ -61,10 +63,10 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className='submit-btn'>Submit</button>
+        <button type="submit" className='submit-btn' onclick={navigate("/")}>Submit</button>
       </form>
       <footer/>
-    </div>
+     </div>
   );
 };
 

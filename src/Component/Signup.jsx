@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const SignupForm = () => {
     email: '',
     password: ''
   });
+
+  const navigate = useNavigate()
 
   const { name, email, password } = formData;
 
@@ -19,6 +22,7 @@ const SignupForm = () => {
     try {
       const response = await axios.post('https://tourism-backend-file.onrender.com/Sign-up', formData); 
       console.log(response.data); 
+      navigate("/")
     } catch (error) {
       console.error('Signup Error:', error);
     }
