@@ -1,0 +1,141 @@
+
+@media only screen and (max-width:414px){
+    .topbar{
+        /* background-color: red; */
+        padding: 1vw;
+    }
+
+    .logo-img{
+        width: 20vw;
+    }
+
+    .topbar-right h3{
+        font-size: 3vw;
+        margin: 1vw auto;
+    } 
+
+    .h3{
+        font-size: 3vw;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+    }
+
+    .navbar a{
+        font-size: 4vw;
+    }
+
+    .home-content{
+        padding: 1vw 5vw;
+    }
+
+    .home-dynamic h2,p{
+        margin: 2vw auto;
+    }
+
+    .home-card-container{
+        flex-direction: column;
+    }
+
+    .state-cards{
+        width: 100%;
+    }
+
+    .indian-tourism-banner{
+        height: 45%;
+        margin: 1vw auto;
+    }
+
+    .indian-tourism-container h1{
+        text-align: center;
+    }
+
+    .indian-tourism-container p{
+        text-align: justify;
+        padding: 0vw 3vw;
+    }
+
+    .dynamic-cards-div{
+        flex-direction: column;
+        padding: 0vw 2vw;
+    }
+
+    .indian-tourism-card, .indian-tourism-cities{
+        width: 100%;
+        margin: 3vw auto;
+        border: none;
+    }
+
+    .packages-flex{
+        flex-direction: column;
+    }
+
+    .flex-item{
+        width: 100%;
+        margin: 2vw auto;
+        padding: 2vw;
+    }
+
+    .card-image{
+        height: 50vw;
+    }
+
+    .places-flex{
+        flex-direction: column;
+    }
+
+    .places-cards{
+        width:100%;
+        margin: 2vw auto;
+        box-shadow: 3px 3px 8px solid rgba(0, 0, 0, 0.173);
+    }
+
+    .places{
+        padding: 2vw;
+    }
+
+    .places-cards h3{
+        padding: 5vw;
+    }
+
+    .place-state-image{
+        height: 50vw;
+    }
+
+    .contact-us{
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .contact-us h2{
+        font-size: 12vw;
+        letter-spacing: 2px;
+    }
+
+    label, input, textarea{
+        font-size: 4vw;
+        margin: 1vw auto;
+        padding: 3vw 0vw;
+    }
+
+    .submit-btn{
+        font-size: 7vw;
+        padding: 2vw 5vw;
+    }
+
+    .dynamic-cities{
+        flex-direction: column;
+    }
+
+    .city-card{
+        width: 100%;
+        margin: 2vw auto;
+        padding: 2vw;
+    }
+
+    .city-image, .places-image{
+        height: 50vw; 
+    }
+
+}

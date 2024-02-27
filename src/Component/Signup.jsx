@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -20,11 +22,14 @@ const SignupForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://tourism-backend-file.onrender.com/Sign-up', formData); 
+      const requestData = { name, email, password };
+      const response = await axios.post('https://tourism-backend-file.onrender.com/Sign-up', requestData); 
       console.log(response.data); 
       navigate("/")
+      toast.success("Registered Successfully");
     } catch (error) {
       console.error('Signup Error:', error);
+      toast.error('Signup failed. Please try again.');
     }
   };
 

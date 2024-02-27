@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +10,7 @@ const Login = () => {
     password: ''
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const { email, password } = formData;
 
@@ -20,10 +22,12 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post('https://tourism-backend-file.onrender.com/login', formData);
-      console.log(response.data); 
-      navigate("/")
+      console.log(response.data);
+      navigate("/");
+      toast.success("Login Successful");
     } catch (error) {
-      console.error('Login Error:', error); 
+      console.error('Login Error:', error);
+      toast.error("Login Failed. Please try again.");
     }
   };
 
@@ -55,6 +59,7 @@ const Login = () => {
         </div>
         <button type="submit" className='submit-btn'>Login</button>
       </form>
+      <ToastContainer /> 
     </div>
   );
 };
