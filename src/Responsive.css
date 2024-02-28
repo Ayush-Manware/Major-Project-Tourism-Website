@@ -138,4 +138,16 @@
         height: 50vw; 
     }
 
+    .offer-flex{
+        flex-direction: column;
+    }
+
+    .offers h2{
+        font-size: 6vw;
+    }
+
+    .offers p{
+        padding: 0vw 3vw;
+    }
+
 }

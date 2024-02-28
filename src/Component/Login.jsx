@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const Login = ({props}) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -25,6 +25,7 @@ const Login = () => {
       console.log(response.data);
       navigate("/");
       toast.success("Login Successful");
+     console.log(props.isLoggedIn)
     } catch (error) {
       console.error('Login Error:', error);
       toast.error("Login Failed. Please try again.");

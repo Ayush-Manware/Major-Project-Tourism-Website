@@ -93,9 +93,9 @@ a{
   margin: 2vw auto;
 }
 
-
 .state-cards h1{
  color: var(--black);
+ font-size: 2vw ;
 }
 
 .state-cards img{
@@ -261,4 +261,36 @@ input,textarea{
 
 .login-div{
   width: 40vw;
+}
+
+.offer-flex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.flex-item{
+  width: 30vw; 
+}
+
+.flex-image{
+  width: 100%; 
+}
+
+.offers{
+  padding: 2vw;
+}
+
+.offers h2{
+  text-align: center;
+  margin: 2vw auto;
+  border: 1px solid gray;
+  padding: 2vw;
+}
+
+.offers p{
+  text-align: justify;
+  letter-spacing: 1px;
 }
